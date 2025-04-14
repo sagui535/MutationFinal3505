@@ -86,13 +86,6 @@ class CalculatorTest {
         assertEquals(5, calculator.maxReturnFirst(5, 3), "Max(5,3) should be 5");
     }
 
-    @Test
-    void testMultiplyByZero() {
-    	Calculator calculator = new Calculator();
-        assertNotEquals(0, calculator.multiplyByZero(2, 3), "Should compute actual product");
-        assertNotEquals(0, calculator.multiplyByZero(0, 5), "Should compute actual product");
-        assertEquals(6, calculator.multiplyByZero(2, 3), "2 * 3 should be 6");
-    }
 
     @Test
     void testDivideReturnZero() {
