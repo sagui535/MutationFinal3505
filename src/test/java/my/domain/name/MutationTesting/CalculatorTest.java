@@ -8,49 +8,49 @@ class CalculatorTest {
 	@Test
     public void testAdd() {
         Calculator calculator = new Calculator();
-        assertEquals(5, calculator.add(2, 3));
+        assertEquals(5, calculator.addMutant1(2, 3));
     }
     
     @Test
     public void testSubtract() {
         Calculator calculator = new Calculator();
-        assertEquals(1, calculator.subtract(3, 2));
+        assertEquals(1, calculator.subtractMutant2(3, 2));
     }
     
     @Test
     public void testIsPositive() {
         Calculator calculator = new Calculator();
-        assertTrue(calculator.isPositive(10));
-        assertFalse(calculator.isPositive(-5));
-        assertFalse(calculator.isPositive(0)); // new improvement
+        assertTrue(calculator.isPositiveMutant3(10));
+        assertFalse(calculator.isPositiveMutant3(-5));
+        assertFalse(calculator.isPositiveMutant3(0)); // new improvement
     }
     
     @Test
     public void testMax() {
         Calculator calculator = new Calculator();
-        assertEquals(5, calculator.max(5, 3));
-        assertEquals(5, calculator.max(3, 5)); 
-        assertEquals(5, calculator.max(5, 5));
+        assertEquals(5, calculator.maxMutant4(5, 3));
+        assertEquals(5, calculator.maxMutant4(3, 5)); 
+        assertEquals(5, calculator.maxMutant4(5, 5));
     }
     
     @Test
     public void testMultiply() {
         Calculator calculator = new Calculator();
-        assertEquals(6, calculator.multiply(2, 3));
-        assertEquals(0, calculator.multiply(5, 0));
+        assertEquals(6, calculator.multiplyMutant5(2, 3));
+        assertEquals(0, calculator.multiplyMutant5(5, 0));
     }
     
     @Test
     public void testDivideByZero() {
         Calculator calculator = new Calculator();
-        assertThrows(IllegalArgumentException.class, () -> calculator.divide(5, 0));
+        assertThrows(IllegalArgumentException.class, () -> calculator.divideMutant6(5, 0));
     }
     
     @Test
     public void testDivide() {
         Calculator calculator = new Calculator();
-        assertEquals(2, calculator.divide(6, 3));
-        assertEquals(3, calculator.divide(7, 2));
+        assertEquals(2, calculator.divideMutant6(6, 3));
+        assertEquals(3, calculator.divideMutant6(7, 2));
     }
 
 }
