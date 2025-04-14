@@ -12,14 +12,14 @@ public class Calculator {
         return a + b;
     }
     
-    // Mutated isPositive: changed > to >=
+    // Mutated isPositive: Changed from >0 to >1
     public boolean isPositive(int number) {
-        return number >= 0;
+        return number > 1;  
     }
     
     // Mutated max: changed > to <
     public int max(int a, int b) {
-        if (a < b) {
+        if (a < b) {  
             return a;
         }
         else {
@@ -57,11 +57,6 @@ public class Calculator {
     // Max that always returns first value
     public int maxReturnFirst(int a, int b) {
         return a;
-    }
-    
-    // Multiply by zero
-    public int multiplyByZero(int a, int b) {
-        return 0;
     }
     
     // Divide that returns 0 when dividing by 0
